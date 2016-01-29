@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 title: "Marital Status"
+=======
+title: "ACS Script - marital status"
+>>>>>>> TZstatsADS/master
 author: "Yanyu"
 date: "January 29, 2016"
 output: html_document
@@ -17,21 +21,27 @@ Parameters:
 MAR    Marital status
 ST     State Code
 PINCP  Total person's income(signed)
+<<<<<<< HEAD
 ADJINC
 SCHL
 ESR
+=======
+>>>>>>> TZstatsADS/master
 
 ```{r}
 reRead = 1
 if(reRead == 1){
   colsToKeep = c("MAR", "ST", "PINCP", "ADJINC", "SCHL", "ESR")
   popDataA = fread("/Users/yutou/Data Science/Data/2013-american-community-survey/pums/ss13pusa.csv", select = colsToKeep)
+<<<<<<< HEAD
   popDataB = fread("/Users/yutou/Data Science/Data/2013-american-community-survey/pums/ss13pusb.csv", select = colsToKeep)
   populData = rbind(popDataA, popDataB)
   rm(popDataA, popDataB)
   save(populData, file = "popuData.RData")
 }else{
   load("popuData.RData")
+=======
+>>>>>>> TZstatsADS/master
 }
 ```
 You can also embed plots, for example:
@@ -41,4 +51,7 @@ plot(cars)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+<<<<<<< HEAD
 
+=======
+>>>>>>> TZstatsADS/master
