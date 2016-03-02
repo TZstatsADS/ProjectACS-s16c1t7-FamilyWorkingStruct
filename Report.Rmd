@@ -93,7 +93,7 @@ plot4 <- ggplot(FINCP_FES3, aes(FINCP,fill=FES)) + geom_histogram()+theme(axis.t
 
 first_plot <- grid.arrange(plot1, plot2, plot3, plot4, ncol=2, nrow=2, widths=c(1,1),heights=c(1, 3))
 ```
-![first_plot](FINCP_dist.png)
+![first_plot](doc/FINCP_dist.png)
 ```{r}
 summary(FINCP_FES2$FINCP)
 summary(FINCP_FES3$FINCP)
@@ -175,7 +175,7 @@ right <- ggplot(FINCP_FES3, aes(x=FES, y=FINCP,fill=EDU))+geom_boxplot(mapping =
 
 second_plot <- grid.arrange(left,right,ncol=2, nrow=1, widths=c(1, 1))
 ```
-![second plot](FINCP_dist_educ.png)
+![second plot](doc/FINCP_dist_educ.png)
 
 While the two plots look fairly similar, a closer look indicates that the median income for the families of married women where they are the sole person in the labor force is slightly higher if the wife has master's and doctorate degrees, while married men's families make much more use out of the husband having professional degrees. There also appear to be more outliers among the family incomes of married men who finished only kindergarten, primary school, or middle school. The general unsurprising trend is that family income tends to rise as the education level of the "laborer" in the family rises. In this sense, however, post-baccalaureate professional degrees are associated with higher median incomes and higher outliers compared to doctorate degrees.  
 
@@ -205,7 +205,7 @@ right <- ggplot(FINCP_FES3, aes(x=FES, y=FINCP,fill=INDP2))+geom_boxplot(mapping
 
 third_plot <- grid.arrange(left,right,ncol=2, nrow=1, widths=c(1, 1))
 ```
-![third_plot](FINCP_dist_indp.png)  
+![third_plot](doc/FINCP_dist_indp.png)  
 
 __The leftmost two categories got cut out of the legend; they are ADMINISTRATION and AGRICULTURE.__  
 
@@ -223,10 +223,10 @@ The top 5 common industries among wives alone in the labor force: medicine, educ
 ## Distribution of types of married-couple families  
 
 Then, we look at the proportion of different types of married-couple families over all married-couple families:
-![bar_1](bar_1.png)  
+![bar_1](doc/bar_1.png)  
 
 Does this proportion differ for married-couple families at or above median income ($77,000), versus below median income? 
-![bar_abovebelow](bar_abovebelow.png)  
+![bar_abovebelow](doc/bar_abovebelow.png)  
 
 As we can see, above median income, there are many more married-couple families with both in the labor force, while below median income, there are many more married-couple families with only one person or none in the labor force. This isn't surprising when you think about it, but it also doesn't necessarily mean that being in the labor force is a family's only source of income, as we'll see later.  
 
@@ -283,7 +283,7 @@ map4 <- map4 + coord_map(projection = "albers", lat0 = 29.5, lat1 = 45.5)
 map1to4 <- grid.arrange(map2, map3, map1, map4, ncol = 2, nrow = 2)
 rm(STATE_WGTP)
 ```
-![fourth_plot](FES_map.png)
+![fourth_plot](doc/FES_map.png)
 
 Across the 48 continental states:  
 
@@ -337,7 +337,7 @@ up <- ggplot(PINCP_FES3, aes(x=1,y=PINCP_FES3$PINCP)) +
         ) 
 sixth_plot <- grid.arrange(up1, up, middle1, middle, ncol=2, nrow=2, widths = c(1, 1), heights=c(1,3))
 ```
-![sixth_plot](PINCP_FES.png)  
+![sixth_plot](doc/PINCP_FES.png)  
 
 These two plots shows the boxplot and distribution of the Personal Income from the family which has only one person in the labor force (LF). We can see that the median of the two plots are generally close to the zero, which is reasonable. Therefore, both distributions are extremely right skewed. This is the usual shape of an income distribution, except nobody here is classified as being in the labor force.  
 
